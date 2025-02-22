@@ -34,3 +34,38 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+/* Testimonials Section */
+#testimonial-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+#testimonial-carousel > div {
+  flex: 0 0 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Glassmorphism Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Carousel Controls */
+#prev-testimonial,
+#next-testimonial {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+#prev-testimonial:hover,
+#next-testimonial:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
