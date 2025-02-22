@@ -93,16 +93,90 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 px-8 bg-gray-800">
-      <h2 class="text-4xl font-bold text-center animate-fade-in">Testimonials</h2>
-      <div class="container mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-gray-700 p-6 rounded-lg shadow-2xl hover:shadow-3xl transition-transform transform hover:scale-105">
-          <p class="text-gray-400">"Great work! Highly recommended."</p>
-          <p class="mt-4 font-bold">- Client Name</p>
+<section id="testimonials" class="py-20 px-8 bg-gray-800">
+  <h2 class="text-4xl font-bold text-center animate-fade-in">What Our Clients Say</h2>
+  <div class="container mx-auto mt-8 relative overflow-hidden">
+    <!-- Testimonials Carousel -->
+    <div id="testimonial-carousel" class="flex transition-transform duration-500 ease-in-out">
+      <!-- Testimonial 1 -->
+      <div class="min-w-full flex justify-center">
+        <div class="bg-gray-700 p-8 rounded-lg shadow-2xl hover:shadow-3xl transition-transform transform hover:scale-105 glass">
+          <div class="flex items-center">
+            <img src="https://via.placeholder.com/80" alt="Client 1" class="w-16 h-16 rounded-full" />
+            <div class="ml-4">
+              <h3 class="text-xl font-bold">John Doe</h3>
+              <p class="text-gray-400">CEO, Tech Solutions</p>
+            </div>
+          </div>
+          <p class="mt-4 text-gray-400">
+            "MY Studio MN SOFT TECH delivered an outstanding Android app for our company. Their attention to detail and professionalism are unmatched!"
+          </p>
+          <div class="mt-4 flex space-x-1">
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+          </div>
         </div>
-        <!-- Add more testimonials here -->
       </div>
-    </section>
+
+      <!-- Testimonial 2 -->
+      <div class="min-w-full flex justify-center">
+        <div class="bg-gray-700 p-8 rounded-lg shadow-2xl hover:shadow-3xl transition-transform transform hover:scale-105 glass">
+          <div class="flex items-center">
+            <img src="https://via.placeholder.com/80" alt="Client 2" class="w-16 h-16 rounded-full" />
+            <div class="ml-4">
+              <h3 class="text-xl font-bold">Jane Smith</h3>
+              <p class="text-gray-400">CTO, Innovate Labs</p>
+            </div>
+          </div>
+          <p class="mt-4 text-gray-400">
+            "The team at MY Studio MN SOFT TECH is incredibly talented. They transformed our idea into a beautiful, functional app."
+          </p>
+          <div class="mt-4 flex space-x-1">
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="min-w-full flex justify-center">
+        <div class="bg-gray-700 p-8 rounded-lg shadow-2xl hover:shadow-3xl transition-transform transform hover:scale-105 glass">
+          <div class="flex items-center">
+            <img src="https://via.placeholder.com/80" alt="Client 3" class="w-16 h-16 rounded-full" />
+            <div class="ml-4">
+              <h3 class="text-xl font-bold">Michael Brown</h3>
+              <p class="text-gray-400">Founder, Appify</p>
+            </div>
+          </div>
+          <p class="mt-4 text-gray-400">
+            "Their expertise in React Native helped us launch a cross-platform app in record time. Highly recommend!"
+          </p>
+          <div class="mt-4 flex space-x-1">
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <button id="prev-testimonial" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-900 p-2 rounded-full hover:bg-gray-800">
+      ◀️
+    </button>
+    <button id="next-testimonial" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-900 p-2 rounded-full hover:bg-gray-800">
+      ▶️
+    </button>
+  </div>
+</section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 px-8 bg-gray-900">
