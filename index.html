@@ -9,92 +9,95 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="./scripts.js" defer></script>
   </head>
-  <body class="bg-gray-50">
+  <body class="bg-gray-950 text-white">
     <!-- Navigation Bar -->
-    <nav id="navbar" class="fixed top-0 w-full bg-white shadow-lg z-50">
+    <nav id="navbar" class="fixed top-0 w-full bg-gray-900 bg-opacity-80 backdrop-blur-md z-50">
       <div class="container mx-auto px-8 py-4 flex justify-between items-center">
-        <a href="#hero" class="text-2xl font-bold text-blue-600">MN SOFT TECH</a>
+        <a href="#hero" class="text-2xl font-bold text-blue-400">MN SOFT TECH</a>
         <ul class="flex space-x-8">
-          <li><a href="#about" class="hover:text-blue-600">About</a></li>
-          <li><a href="#services" class="hover:text-blue-600">Services</a></li>
-          <li><a href="#portfolio" class="hover:text-blue-600">Portfolio</a></li>
-          <li><a href="#testimonials" class="hover:text-blue-600">Testimonials</a></li>
-          <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+          <li><a href="#about" class="hover:text-blue-400">About</a></li>
+          <li><a href="#services" class="hover:text-blue-400">Services</a></li>
+          <li><a href="#portfolio" class="hover:text-blue-400">Portfolio</a></li>
+          <li><a href="#testimonials" class="hover:text-blue-400">Testimonials</a></li>
+          <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
         </ul>
+        <button id="theme-toggle" class="p-2 rounded-full bg-gray-800 hover:bg-gray-700">
+          🌓
+        </button>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+    <section id="hero" class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-gray-900 to-gray-800">
       <h1 class="text-6xl font-bold animate-fade-in">MY Studio MN SOFT TECH</h1>
       <p class="mt-4 text-xl animate-fade-in">Crafting Innovative Android Solutions</p>
       <div class="mt-8 animate-fade-in">
-        <a href="#portfolio" class="bg-white text-blue-600 px-6 py-2 rounded-full mr-4 hover:bg-gray-100">View Projects</a>
-        <a href="#contact" class="bg-transparent border border-white px-6 py-2 rounded-full hover:bg-white hover:text-blue-600">Contact Me</a>
+        <a href="#portfolio" class="bg-blue-500 text-white px-6 py-2 rounded-full mr-4 hover:bg-blue-600">View Projects</a>
+        <a href="#contact" class="bg-transparent border border-blue-500 px-6 py-2 rounded-full hover:bg-blue-500 hover:text-white">Contact Me</a>
       </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 px-8 bg-white">
+    <section id="about" class="py-20 px-8 bg-gray-900">
       <div class="container mx-auto flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 animate-slide-in-left">
           <h2 class="text-4xl font-bold">About Us</h2>
-          <p class="mt-4 text-gray-600">
+          <p class="mt-4 text-gray-400">
             We are a passionate team of Android developers dedicated to building innovative and user-friendly mobile applications.
           </p>
         </div>
         <div class="md:w-1/2 mt-8 md:mt-0 animate-slide-in-right">
-          <img src="https://via.placeholder.com/500" alt="About Us" class="rounded-lg shadow-lg" />
+          <img src="https://via.placeholder.com/500" alt="About Us" class="rounded-lg shadow-2xl" />
         </div>
       </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 px-8 bg-gray-100">
+    <section id="services" class="py-20 px-8 bg-gray-800">
       <h2 class="text-4xl font-bold text-center animate-fade-in">Our Services</h2>
       <div class="container mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-transform transform hover:scale-105">
+        <div class="bg-gray-700 p-6 rounded-lg shadow-2xl hover:shadow-3xl transition-transform transform hover:scale-105">
           <span class="text-4xl">📱</span>
           <h3 class="text-xl font-bold mt-4">Android App Development</h3>
-          <p class="mt-2 text-gray-600">We build high-quality Android apps using Kotlin and Java.</p>
+          <p class="mt-2 text-gray-400">We build high-quality Android apps using Kotlin and Java.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-transform transform hover:scale-105">
+        <div class="bg-gray-700 p-6 rounded-lg shadow-2xl hover:shadow-3xl transition-transform transform hover:scale-105">
           <span class="text-4xl">🌐</span>
           <h3 class="text-xl font-bold mt-4">Cross-Platform App Development</h3>
-          <p class="mt-2 text-gray-600">We create cross-platform apps using React Native.</p>
+          <p class="mt-2 text-gray-400">We create cross-platform apps using React Native.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-transform transform hover:scale-105">
+        <div class="bg-gray-700 p-6 rounded-lg shadow-2xl hover:shadow-3xl transition-transform transform hover:scale-105">
           <span class="text-4xl">🎨</span>
           <h3 class="text-xl font-bold mt-4">UI/UX Design</h3>
-          <p class="mt-2 text-gray-600">We design beautiful and intuitive user interfaces.</p>
+          <p class="mt-2 text-gray-400">We design beautiful and intuitive user interfaces.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-transform transform hover:scale-105">
+        <div class="bg-gray-700 p-6 rounded-lg shadow-2xl hover:shadow-3xl transition-transform transform hover:scale-105">
           <span class="text-4xl">🔧</span>
           <h3 class="text-xl font-bold mt-4">App Maintenance and Support</h3>
-          <p class="mt-2 text-gray-600">We provide ongoing support and maintenance for your apps.</p>
+          <p class="mt-2 text-gray-400">We provide ongoing support and maintenance for your apps.</p>
         </div>
       </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-20 px-8 bg-white">
+    <section id="portfolio" class="py-20 px-8 bg-gray-900">
       <h2 class="text-4xl font-bold text-center animate-fade-in">Our Portfolio</h2>
       <div class="container mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
+        <div class="bg-gray-700 p-6 rounded-lg shadow-2xl hover:shadow-3xl transition-transform transform hover:scale-105">
           <img src="https://via.placeholder.com/400" alt="Project 1" class="rounded-lg" />
           <h3 class="text-xl font-bold mt-4">Project 1</h3>
-          <p class="mt-2 text-gray-600">A description of the project.</p>
+          <p class="mt-2 text-gray-400">A description of the project.</p>
         </div>
         <!-- Add more projects here -->
       </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 px-8 bg-gray-100">
+    <section id="testimonials" class="py-20 px-8 bg-gray-800">
       <h2 class="text-4xl font-bold text-center animate-fade-in">Testimonials</h2>
       <div class="container mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
-          <p class="text-gray-600">"Great work! Highly recommended."</p>
+        <div class="bg-gray-700 p-6 rounded-lg shadow-2xl hover:shadow-3xl transition-transform transform hover:scale-105">
+          <p class="text-gray-400">"Great work! Highly recommended."</p>
           <p class="mt-4 font-bold">- Client Name</p>
         </div>
         <!-- Add more testimonials here -->
@@ -102,18 +105,18 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-8 bg-white">
+    <section id="contact" class="py-20 px-8 bg-gray-900">
       <h2 class="text-4xl font-bold text-center animate-fade-in">Contact Us</h2>
       <form class="container mx-auto mt-8 max-w-lg">
-        <input type="text" placeholder="Your Name" class="w-full p-2 mb-4 border rounded-lg" required />
-        <input type="email" placeholder="Your Email" class="w-full p-2 mb-4 border rounded-lg" required />
-        <textarea placeholder="Your Message" class="w-full p-2 mb-4 border rounded-lg" rows="5" required></textarea>
+        <input type="text" placeholder="Your Name" class="w-full p-2 mb-4 bg-gray-800 border border-gray-700 rounded-lg" required />
+        <input type="email" placeholder="Your Email" class="w-full p-2 mb-4 bg-gray-800 border border-gray-700 rounded-lg" required />
+        <textarea placeholder="Your Message" class="w-full p-2 mb-4 bg-gray-800 border border-gray-700 rounded-lg" rows="5" required></textarea>
         <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">Send Message</button>
       </form>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 bg-gray-800 text-white text-center">
+    <footer class="py-8 bg-gray-950 text-center">
       <p>© 2023 MY Studio MN SOFT TECH. All rights reserved.</p>
     </footer>
   </body>
