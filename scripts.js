@@ -1,29 +1,36 @@
-@import url("https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css");
+// GSAP Animations
+gsap.registerPlugin(ScrollTrigger);
 
-/* Custom Animations */
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
+// Animate sections on scroll
+gsap.utils.toArray("section").forEach((section) => {
+  gsap.from(section, {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    scrollTrigger: {
+      trigger: section,
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+  });
+});
 
-@keyframes slide-in-left {
-  from { transform: translateX(-100%); }
-  to { transform: translateX(0); }
-}
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
 
-@keyframes slide-in-right {
-  from { transform: translateX(100%); }
-  to { transform: translateX(0); }
-}
-
-.animate-fade-in {
-  animation: fade-in 1s ease-in-out;
-}
-
-.animate-slide-in-left {
-  animation: slide-in-left 1s ease-in-out;
-}
-
-.animate-slide-in-right {
-  animation: slide-in-right 1s ease-in-out;
-}
+// Sticky Navigation Bar
+window.addEventListener("scroll", () => {
+  const navbar = document.getElementById("navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("shadow-lg");
+  } else {
+    navbar.classList.remove("shadow-lg");
+  }
+});
