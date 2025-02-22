@@ -1,28 +1,51 @@
-
-
-// Testimonials Carousel
+// Testimonials Carousel with Auto-Slide
 let currentTestimonial = 0;
 const testimonials = document.querySelectorAll("#testimonial-carousel > div");
 const totalTestimonials = testimonials.length;
+let autoSlideInterval;
 
+// Function to show testimonial with GSAP animation
 function showTestimonial(index) {
-  testimonials.forEach((testimonial, i) => {
-    testimonial.style.transform = `translateX(${100 * (i - index)}%)`;
+  gsap.to("#testimonial-carousel", {
+    x: `-${index * 100}%`,
+    duration: 1,
+    ease: "power3.inOut",
   });
 }
 
+// Auto-slide functionality
+function startAutoSlide() {
+  autoSlideInterval = setInterval(() => {
+    currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+    showTestimonial(currentTestimonial);
+  }, 5000); // Change slide every 5 seconds
+}
+
+// Manual navigation
 document.getElementById("next-testimonial").addEventListener("click", () => {
   currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
   showTestimonial(currentTestimonial);
+  resetAutoSlide();
 });
 
 document.getElementById("prev-testimonial").addEventListener("click", () => {
   currentTestimonial = (currentTestimonial - 1 + totalTestimonials) % totalTestimonials;
   showTestimonial(currentTestimonial);
+  resetAutoSlide();
 });
 
-// Initialize first testimonial
+// Reset auto-slide timer on manual navigation
+function resetAutoSlide() {
+  clearInterval(autoSlideInterval);
+  startAutoSlide();
+}
+
+// Initialize first testimonial and start auto-slide
 showTestimonial(currentTestimonial);
+startAutoSlide();
+
+
+
 // GSAP Animations
 gsap.registerPlugin(ScrollTrigger);
 
