@@ -1,3 +1,28 @@
+
+
+// Testimonials Carousel
+let currentTestimonial = 0;
+const testimonials = document.querySelectorAll("#testimonial-carousel > div");
+const totalTestimonials = testimonials.length;
+
+function showTestimonial(index) {
+  testimonials.forEach((testimonial, i) => {
+    testimonial.style.transform = `translateX(${100 * (i - index)}%)`;
+  });
+}
+
+document.getElementById("next-testimonial").addEventListener("click", () => {
+  currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+  showTestimonial(currentTestimonial);
+});
+
+document.getElementById("prev-testimonial").addEventListener("click", () => {
+  currentTestimonial = (currentTestimonial - 1 + totalTestimonials) % totalTestimonials;
+  showTestimonial(currentTestimonial);
+});
+
+// Initialize first testimonial
+showTestimonial(currentTestimonial);
 // GSAP Animations
 gsap.registerPlugin(ScrollTrigger);
 
