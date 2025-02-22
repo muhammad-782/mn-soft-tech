@@ -1,18 +1,22 @@
 // Hero Section Animations
-gsap.from("#hero-image", {
-  x: "100%",
-  opacity: 0,
-  duration: 1.5,
-  ease: "power3.out",
-  delay: 0.5,
-});
+document.addEventListener("DOMContentLoaded", () => {
+  // Animate the hero image
+  gsap.to("#hero-image", {
+    x: 0,
+    opacity: 1,
+    duration: 1.5,
+    ease: "power3.out",
+    delay: 0.5,
+  });
 
-gsap.from("#hero-content", {
-  x: "-100%",
-  opacity: 0,
-  duration: 1.5,
-  ease: "power3.out",
-  delay: 0.5,
+  // Animate the hero content
+  gsap.to("#hero-content", {
+    x: 0,
+    opacity: 1,
+    duration: 1.5,
+    ease: "power3.out",
+    delay: 0.5,
+  });
 });
 
 // Testimonials Carousel with Auto-Slide
