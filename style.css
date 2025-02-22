@@ -68,3 +68,30 @@
 #next-testimonial:hover {
   background: rgba(0, 0, 0, 0.8);
 }
+
+
+/* Hero Section */
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+@media (min-width: 768px) {
+  #hero {
+    flex-direction: row;
+  }
+}
+
+#hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#hero-content {
+  max-width: 600px;
+}
