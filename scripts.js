@@ -25,12 +25,13 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Sticky Navigation Bar
-window.addEventListener("scroll", () => {
-  const navbar = document.getElementById("navbar");
-  if (window.scrollY > 50) {
-    navbar.classList.add("shadow-lg");
-  } else {
-    navbar.classList.remove("shadow-lg");
-  }
+// Dark/Light Mode Toggle
+const themeToggle = document.getElementById("theme-toggle");
+const body = document.body;
+
+themeToggle.addEventListener("click", () => {
+  body.classList.toggle("bg-gray-950");
+  body.classList.toggle("text-white");
+  body.classList.toggle("bg-white");
+  body.classList.toggle("text-gray-900");
 });
