@@ -1,4 +1,3 @@
-
 // Hero Section Animations
 gsap.from("#hero-image", {
   x: "100%",
