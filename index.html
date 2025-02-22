@@ -28,14 +28,26 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-gray-900 to-gray-800">
-      <h1 class="text-6xl font-bold animate-fade-in">MY Studio MN SOFT TECH</h1>
-      <p class="mt-4 text-xl animate-fade-in">Crafting Innovative Android Solutions</p>
-      <div class="mt-8 animate-fade-in">
-        <a href="#portfolio" class="bg-blue-500 text-white px-6 py-2 rounded-full mr-4 hover:bg-blue-600">View Projects</a>
-        <a href="#contact" class="bg-transparent border border-blue-500 px-6 py-2 rounded-full hover:bg-blue-500 hover:text-white">Contact Me</a>
-      </div>
-    </section>
+<section id="hero" class="h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 text-white overflow-hidden">
+  <!-- Left Side: Image -->
+  <div id="hero-image" class="md:w-1/2 flex justify-center items-center transform translate-x-full opacity-0">
+    <img
+      src="https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+      alt="Hero Image"
+      class="w-3/4 md:w-full rounded-lg shadow-2xl"
+    />
+  </div>
+
+  <!-- Right Side: Title, Subtitle, and Buttons -->
+  <div id="hero-content" class="md:w-1/2 text-center md:text-left transform -translate-x-full opacity-0">
+    <h1 class="text-5xl md:text-6xl font-bold">MY Studio MN SOFT TECH</h1>
+    <p class="mt-4 text-xl">Crafting Innovative Android Solutions</p>
+    <div class="mt-8">
+      <a href="#portfolio" class="bg-white text-blue-600 px-6 py-2 rounded-full mr-4 hover:bg-gray-100">View Projects</a>
+      <a href="#contact" class="bg-transparent border border-white px-6 py-2 rounded-full hover:bg-white hover:text-blue-600">Contact Me</a>
+    </div>
+  </div>
+</section>
 
     <!-- About Section -->
     <section id="about" class="py-20 px-8 bg-gray-900">
